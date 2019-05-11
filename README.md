@@ -10,3 +10,4 @@ My fork of suckless' st with some patches applied. Based off official version 0.
 
 ## Personal patches:
 * color scheme
+* tab size of 4
