@@ -6,3 +6,7 @@ My fork of suckless' st with some patches applied. Based off official version 0.
 * clipboard
 * delkey
 * scrollback (with scrollback-mouse)
+* anysize
+
+## Personal patches:
+* color scheme
