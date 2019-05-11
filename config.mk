@@ -20,7 +20,12 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\
        `$(PKG_CONFIG) --libs fontconfig` \
        `$(PKG_CONFIG) --libs freetype2`
 
+# compiler and linker (clang doesn't work with the usual default linker and tcc requires commenting out LDFLAGS)
+# CC = c99
+
 # flags
+CFLAGS = -march=native -O2 -flto
+LDFLAGS = -Wl,-O2 -Wl,--as-needed
 STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
 STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS)
 STLDFLAGS = $(LIBS) $(LDFLAGS)
@@ -30,6 +35,3 @@ STLDFLAGS = $(LIBS) $(LDFLAGS)
 #LIBS = -L$(X11LIB) -lm -lX11 -lutil -lXft \
 #       `pkg-config --libs fontconfig` \
 #       `pkg-config --libs freetype2`
-
-# compiler and linker
-# CC = c99
