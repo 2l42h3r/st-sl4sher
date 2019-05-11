@@ -8,6 +8,7 @@ My fork of suckless' st with some patches applied. Based off official version 0.
 * scrollback (with scrollback-mouse)
 * anysize
 
-## Personal patches:
+## Personal changes:
 * color scheme
 * tab size of 4
+* made -march=native, -O2 and -flto default compile options
